@@ -1,0 +1,112 @@
+@import 'variables';
+@import 'mixins';
+
+/* sass --watch _main.scss output.css */
+
+// Stili globali
+body {
+    font-family: $font-primary;
+    color: $color-dark;
+    line-height: 1.6;
+}
+
+p {
+    font-family: $font-secondary;
+}
+
+.container {
+    background-color: $color-background;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-primary;
+    font-weight: bold !important;
+}
+
+
+a {
+    color: $color-secondary;
+    text-decoration: none;
+    font-family: $font-secondary;
+
+}
+
+a:hover {
+    color: $color-tertiary;
+}
+
+// Classi di animazione
+.slide-from-left {
+    @include slide-in-from-left;
+}
+
+.slide-from-right {
+    @include slide-in-from-right;
+}
+
+.fade-in {
+    @include fade-in;
+}
+
+.scale-up {
+    @include scale-up;
+}
+
+// Classi utilità
+.button {
+    padding: 10px 20px;
+    background-color: $color-dark;
+    color: $color-background;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &.slide-from-left {
+        @extend .slide-from-left;
+    }
+
+    &:hover {
+        background-color: $color-tertiary;
+    }
+}
+
+.small-title {
+    font-size: $text-small-title;
+}
+
+.medium-title {
+    font-size: $text-medium-title;
+
+}
+
+.big-title {
+    font-size: $text-large-title;
+
+}
+
+.very-big-title {
+    font-size: $text-extra-large-title;
+
+}
+
+.small-p {
+    font-size: $text-small-p
+}
+
+.medium-p {
+    font-size: $text-medium-p
+}
+
+.big-p {
+    font-size: $text-large-p
+}
+
+.very-big-p {
+    font-size: $text-extra-large-p;
+}
