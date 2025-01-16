@@ -1,6 +1,7 @@
 import React from 'react';
 import CustomTitle from '../../Atoms/CustomTitle';
 import styled from 'styled-components';
+import CustomParagraph from '../../Atoms/CustomParagraph';
 
 const Hero = ({ background, isVideo, titleHero, paragraph }) => {
   return (
@@ -14,7 +15,7 @@ const Hero = ({ background, isVideo, titleHero, paragraph }) => {
       )}
       <HeroContent>
         <CustomTitle className="hero-title" text={titleHero}/>
-        <CustomTitle className="hero-paragraph" text={paragraph}/>
+        <CustomParagraph className="hero-paragraph" text={paragraph}/>
       </HeroContent>
     </HeroContainer>
   );
@@ -61,13 +62,13 @@ const HeroContent = styled.div`
 
   .hero-title {
     color: white;
-    font-size: 5rem;
-    font-weight: bold;
-    letter-spacing: 0;
+    font-size: 4rem;
+    font-weight: 100!important;
+    letter-spacing: -8px;
   }
     .hero-paragraph{
     color: white;
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 100;
   }
 `;
