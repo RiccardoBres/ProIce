@@ -131,7 +131,7 @@ const Offcanvas = styled.div`
   right: ${({ show }) => (show ? '0' : '-100%')};
   width: 280px;
   height: 100%;
-  background-color: transparent;
+  background-color: #000000e8;
   backdrop-filter: blur(5px);
   color: white;
   padding: 2rem 1rem;
@@ -150,7 +150,7 @@ const Offcanvas = styled.div`
     transition: color 0.2s ease;
 
     &:hover {
-      color: rgb(70, 128, 136);
+      color: rgb(182, 169, 101);
     }
   }
 `;

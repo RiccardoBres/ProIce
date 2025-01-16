@@ -31,6 +31,10 @@ const ProductContainer = styled.div`
   padding: 20px;
   text-align: center;
 
+  @media(max-width: 576px) {
+    max-height: 50vh;
+  }
+
   .products-title{
     font-size: 2.5rem;
     margin-bottom: 3rem;

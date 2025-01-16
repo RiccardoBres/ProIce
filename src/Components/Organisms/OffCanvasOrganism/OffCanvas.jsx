@@ -33,7 +33,7 @@ const CanvasWrapper = styled.div`
   right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
   width: 70%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #000000e8;
   color: white;
   display: flex;
   flex-direction: column;
