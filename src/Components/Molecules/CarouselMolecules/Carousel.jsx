@@ -17,8 +17,8 @@ const Carousel = () => {
             grabCursor={true}
             centeredSlides={true}
             loop={false}
-            slidesPerView={3} 
-            spaceBetween={30} 
+            slidesPerView={2} 
+            spaceBetween={40} 
             coverflowEffect={{
                 rotate: 50, // Nessuna rotazione
                 stretch: 50, // Allunga leggermente le immagini laterali

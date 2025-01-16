@@ -63,7 +63,7 @@ const HeroContent = styled.div`
   .hero-title {
     color: white;
     font-size: 4rem;
-    font-weight: bold!important;
+    font-weight: 100!important;
     letter-spacing: -8px;
   }
     .hero-paragraph{
