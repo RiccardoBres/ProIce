@@ -5,6 +5,8 @@ import HeroImg from '../Layout/Assets/Herobg.jpg';
 import GeneralInfo from '../Components/Organisms/GeneralInfoOrganism/GeneralInfo';
 import ProductOrganism from '../Components/Organisms/ProductCarouselOrganism/ProductOrganism';
 import SocialInstants from '../Components/Organisms/SocialIstantsOrganism/SocialInstants';
+import FormSection from '../Components/Organisms/ContactFormOrganism/FormSection';
+import FooterContent from '../Components/Molecules/FooterMolecules/FooterContent';
 
 const Home = () => {
   return (
@@ -14,6 +16,8 @@ const Home = () => {
       <GeneralInfo />
       <ProductOrganism/>
       <SocialInstants/>
+      <FormSection/>
+      <FooterContent/>
     </>
   );
 };

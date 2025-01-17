@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SocialCard = ({ imageUrl, description, instagramLink }) => {
-  return (
-    <CardContainer>
-      <ImageWrapper imageUrl={imageUrl} />
-      <InstagramLink href={instagramLink} target="_blank">
-        IG
-      </InstagramLink>
-      <Description>{description}</Description>
-    </CardContainer>
-  );
+    return (
+        <CardContainer>
+            <ImageWrapper imageUrl={imageUrl} />
+            <InstagramLink href={instagramLink} target="_blank">
+                IG
+            </InstagramLink>
+            <Description>{description}</Description>
+        </CardContainer>
+    );
 };
 
 export default SocialCard;
@@ -29,11 +29,9 @@ const CardContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    margin-bottom: 24px; /* Più spazio tra le card su schermi piccoli */
   }
 
   @media (max-width: 576px) {
-    margin-bottom: 32px; /* Ancora più spazio per schermi molto piccoli */
     height: 350px; /* Riduci l'altezza per adattarsi meglio agli schermi più piccoli */
   }
 `;

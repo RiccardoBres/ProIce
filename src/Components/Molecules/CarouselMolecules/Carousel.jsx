@@ -24,7 +24,7 @@ const Carousel = () => {
                 stretch: 50, // Allunga leggermente le immagini laterali
                 depth: 50, // Effetto 3D sulle immagini
                 modifier: 1, // Intensità dell'effetto
-                slideShadows: true, // Ombre laterali
+                slideShadows: false, // Ombre laterali
             }}
             pagination={false} // Abilita i punti di navigazione
             navigation={{

@@ -68,22 +68,22 @@ const SocialInstants = () => {
 export default SocialInstants;
 
 const SocialContainer = styled.div`
-  background-color: black;
+  background-color: #131313;
   padding: 80px 0;
 
   .container-social-cards {
-    background-color: black;
+  background-color: #131313;
     max-width: 1000px;
   }
 
   .row {
-    background-color: black;
+  background-color: #131313;
     padding-top: 50px !important;
     padding-bottom: 50px;
   }
 
   .social-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: white;
     text-align: center;
   }
@@ -93,12 +93,11 @@ const SocialContainer = styled.div`
     padding: 10px;
 
     @media (max-width: 768px) {
-      margin-bottom: 40px; /* Aumenta lo spazio tra le colonne su tablet */
       padding: 20px; /* Aggiungi più respiro intorno alle card */
     }
 
     @media (max-width: 576px) {
-      margin-bottom: 50px; /* Spazio extra per schermi molto piccoli */
+      margin-bottom: 0px; 
       padding: 25px; /* Aumenta ulteriormente il respiro */
     }
   }

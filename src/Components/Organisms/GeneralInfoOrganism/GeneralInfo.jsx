@@ -26,7 +26,7 @@ const GeneralInfo = () => {
 export default GeneralInfo;
 
 const InfoSection = styled.section`
-  background-color: black;
+  background-color: #131313;
   color: white;
   display: flex;
   justify-content: center;
@@ -37,7 +37,8 @@ const InfoSection = styled.section`
 
 const ContentWrapper = styled.div`
   text-align: center;
-  max-width: 800px;
+  max-width: 700px;
+  margin-top: 150px;
 `;
 
 const Section = styled.div`
@@ -45,11 +46,12 @@ const Section = styled.div`
 
   .info-title {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 50px 0;
   }
 
   .info-paragraph {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 25px;
+    color: #b1b1b1;
   }
 `;
