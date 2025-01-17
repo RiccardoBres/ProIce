@@ -7,7 +7,7 @@ const FooterContent = () => {
     <FooterWrapper>
       <img src={Logo} alt="logo-footer" className='logo-footer'/>
     <FooterInfo>
-      <p>&copy; 2025 Ice Cube. All Rights Reserved.</p>
+      <p>&copy; 2025 ProIce. All Rights Reserved.</p>
       <FooterLinks>
         <FooterLink href="#">Privacy Policy</FooterLink>
         <FooterLink href="#">Terms of Service</FooterLink>
