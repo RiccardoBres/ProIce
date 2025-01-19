@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 import CustomTitle from '../../Atoms/CustomTitle';
 import CustomImage from '../../Atoms/CustomImage';
@@ -9,7 +10,9 @@ import LogoTipo from '../../../Layout/Assets/Logotipo.png';
 const ResponsiveNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
-  const titles = ['Home', 'Company', 'WhyProIce', 'Products', 'Where'];
+  const navigate = useNavigate();
+
+  const titles = ['Home', 'Products', 'Where'];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,13 +25,24 @@ const ResponsiveNavbar = () => {
 
   const toggleOffcanvas = () => setShowOffcanvas(!showOffcanvas);
 
+  const handleNavigate = (title) => {
+    // Se il titolo è "Home", naviga alla root '/'
+    const path = title === 'Home' ? '/' : `/${title.toLowerCase()}`;
+    navigate(path);
+  };
+
   return (
     <>
       <NavContainer scrolled={scrolled}>
         <CustomImage src={Logo} className="logo-nav primary-logo" alt="Logo" />
         <NavMenu>
           {titles.map((title, index) => (
-            <CustomTitle key={index} className="nav-title" text={title} href={`#${title.toLowerCase()}`} />
+            <CustomTitle
+              key={index}
+              className="nav-title"
+              text={title}
+              onClick={() => handleNavigate(title)} // Usa handleNavigate
+            />
           ))}
         </NavMenu>
         <HamburgerMenu onClick={toggleOffcanvas}>
@@ -42,7 +56,15 @@ const ResponsiveNavbar = () => {
       <Offcanvas show={showOffcanvas}>
         <CloseButton onClick={toggleOffcanvas}>×</CloseButton>
         {titles.map((title, index) => (
-          <CustomTitle key={index} className="offcanvas-title" text={title} href={`#${title.toLowerCase()}`} />
+          <CustomTitle
+            key={index}
+            className="offcanvas-title"
+            text={title}
+            onClick={() => {
+              toggleOffcanvas(); // Chiude l'offcanvas
+              handleNavigate(title); // Naviga alla pagina
+            }}
+          />
         ))}
         <CustomImage src={LogoTipo} className="logo-nav w-50" alt="LogoTipo" />
       </Offcanvas>
@@ -51,6 +73,7 @@ const ResponsiveNavbar = () => {
 };
 
 export default ResponsiveNavbar;
+
 
 const NavContainer = styled.nav`
   position: fixed;
@@ -68,7 +91,6 @@ const NavContainer = styled.nav`
     width: 10%;
     @media (max-width: 768px) {
           width: 40%;
-
     }
   }
 
@@ -92,9 +114,10 @@ const NavMenu = styled.div`
     color: white;
     text-transform: uppercase;
     transition: color 0.2s ease;
+    cursor: pointer;
 
     &:hover {
-      color: rgb(70, 128, 136);
+      color: rgb(248, 224, 173);
     }
   }
 

@@ -2,17 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import CustomTitle from '../../Atoms/CustomTitle';
 import Carousel from '../../Molecules/CarouselMolecules/Carousel';
-import CarouselImage1 from '../../../Layout/Assets/CarouselProducts/Carousel1.jpeg';
-import CarouselImage2 from '../../../Layout/Assets/CarouselProducts/Carousel2.jpeg';
-import CarouselImage3 from '../../../Layout/Assets/CarouselProducts/Carousel3.jpeg';
 
 
 
-const images = [
-    { url: CarouselImage1, description: 'Descrizione immagine 1' },
-    { url: CarouselImage2, description: 'Descrizione immagine 2' },
-    { url: CarouselImage3, description: 'Descrizione immagine 3' },
-];
 
 const ProductOrganism = () => {
     return (
