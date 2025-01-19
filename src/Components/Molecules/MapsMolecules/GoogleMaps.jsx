@@ -11,7 +11,7 @@ const MapWrapper = styled.div`
   height: 50vh;  // Imposta l'altezza della mappa come metà della finestra
   width: 50%;   // Imposta la larghezza della mappa al 100% del contenitore
   @media (max-width: 768px) {
-    height: 40vh;  // Su schermi più piccoli, riduci l'altezza
+    height: 40vh;  
     width: 90%;
   }
   @media (max-width: 480px) {
