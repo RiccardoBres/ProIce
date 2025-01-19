@@ -8,8 +8,8 @@ import Logo from '../../../Layout/Assets/Logotipo.png'; // Assicurati che il per
 import 'leaflet/dist/leaflet.css';
 
 const MapWrapper = styled.div`
-  height: 50vh;  // Imposta l'altezza della mappa come metà della finestra
-  width: 50%;   // Imposta la larghezza della mappa al 100% del contenitore
+  height: 50vh;  
+  width: 50%;  
   @media (max-width: 768px) {
     height: 40vh;  
     width: 90%;
