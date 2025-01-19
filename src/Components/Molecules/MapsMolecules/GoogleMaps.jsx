@@ -15,7 +15,7 @@ const MapWrapper = styled.div`
     width: 90%;
   }
   @media (max-width: 480px) {
-    height: 30vh;  // Su schermi molto piccoli, riduci ulteriormente
+    height: 30vh;  
   }
 `;
 
