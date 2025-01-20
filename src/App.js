@@ -5,6 +5,8 @@ import ScrollToTop from './Hooks/ScroolToTop';
 import Home from './Pages/Home';
 import Products from './Pages/Products';
 import Maps from './Pages/Maps';
+import TermsOfService from './Pages/TermsOfService';
+import PrivacyPolicy from './Pages/PrivacyPolicy';
 
 
 const App = () => {
@@ -15,6 +17,8 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/where" element={<Maps />} />
+        <Route path="/terms-of-sale" element={<TermsOfService />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </Router>
   )

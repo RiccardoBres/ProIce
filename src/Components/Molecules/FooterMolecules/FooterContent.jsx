@@ -1,17 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../../../Layout/Assets/Logotipo.png';
+import { useNavigate } from 'react-router-dom';
+
 
 const FooterContent = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (title) => {
+      navigate(title);
+  };
+
   return (
     <FooterWrapper>
       <img src={Logo} alt="logo-footer" className='logo-footer'/>
     <FooterInfo>
       <p>&copy; 2025 ProIce. All Rights Reserved.</p>
       <FooterLinks>
-        <FooterLink href="#">Privacy Policy</FooterLink>
-        <FooterLink href="#">Terms of Service</FooterLink>
-        <FooterLink href="#">Contact</FooterLink>
+        <FooterLink onClick={() => handleNavigate('/privacy-policy')}>Privacy Policy</FooterLink>
+        <FooterLink onClick={() => handleNavigate('/terms-of-sale')}>Terms of Service</FooterLink>
+        <FooterLink onClick={() => handleNavigate('/where')}>Contact</FooterLink>
       </FooterLinks>
     </FooterInfo>
   </FooterWrapper>
@@ -49,6 +57,7 @@ const FooterLinks = styled.div`
   font-size: 12px;
   flex-wrap: wrap;
   justify-content: center;
+  cursor: pointer;
 `;
 
 const FooterLink = styled.a`
@@ -56,5 +65,6 @@ const FooterLink = styled.a`
   text-decoration: none;
   &:hover {
     text-decoration: underline;
+          color: rgb(248, 224, 173);
   }
 `;

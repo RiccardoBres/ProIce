@@ -61,8 +61,8 @@ const ResponsiveNavbar = () => {
             className="offcanvas-title"
             text={title}
             onClick={() => {
-              toggleOffcanvas(); // Chiude l'offcanvas
-              handleNavigate(title); // Naviga alla pagina
+              toggleOffcanvas(); 
+              handleNavigate(title); 
             }}
           />
         ))}
