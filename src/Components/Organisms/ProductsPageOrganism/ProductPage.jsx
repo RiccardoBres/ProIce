@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProductsCard from '../../Molecules/CardsMolecules/ProductsCard';
@@ -14,18 +15,17 @@ const ProductPage = () => {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 576); // Imposta 'true' per schermi <= 576px
+      setIsMobile(window.innerWidth <= 576);
     };
 
-    checkMobile(); // Verifica la larghezza alla prima renderizzazione
-    window.addEventListener('resize', checkMobile); // Aggiungi listener per il ridimensionamento
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
 
     return () => {
-      window.removeEventListener('resize', checkMobile); // Pulisci l'event listener
+      window.removeEventListener('resize', checkMobile);
     };
   }, []);
 
-  // I dati dei prodotti, modificati in base alla larghezza dello schermo
   const productsUltimate = [
     { imageSrc: Product1, titles: ['SPHERE 5.5', 'SPHERE 6.5'], titlePosition: isMobile ? 'row' : 'side' },
     { imageSrc: Product2, titles: ['CUBE 4x4x4', 'CUBE 5x5x5'], titlePosition: isMobile ? 'row' : 'row' },
@@ -43,32 +43,72 @@ const ProductPage = () => {
     { imageSrc: Product5, titles: ['EGIPCIAN 2.5', 'EGIPCIAN 3.5'], titlePosition: 'row' },
   ];
 
+  const titleVariants = {
+    hidden: { opacity: 0, y: -30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+  };
+
   return (
     <PageContainer>
-      <CustomTitle text={'ULTIMATE ICE MENU'} className='title-ice' />
+      <motion.div
+        className="title-ice"
+        variants={titleVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <CustomTitle text={'ULTIMATE ICE MENU'} />
+      </motion.div>
       <Container>
         <Row>
           {productsUltimate.map((product, index) => (
             <Col key={index} xs={12} sm={6} md={4} lg={4} className="col-products">
-              <ProductsCard
-                imageSrc={product.imageSrc}
-                titles={product.titles}
-                titlePosition={product.titlePosition}
-              />
+              <motion.div
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <ProductsCard
+                  imageSrc={product.imageSrc}
+                  titles={product.titles}
+                  titlePosition={product.titlePosition}
+                />
+              </motion.div>
             </Col>
           ))}
         </Row>
       </Container>
-      <CustomTitle text={'SUBLIME & HANDMADE'} className='title-ice' />
+      <motion.div
+        className="title-ice"
+        variants={titleVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <CustomTitle text={'SUBLIME & HANDMADE'} />
+      </motion.div>
       <Container>
         <Row>
           {productsSublime.map((product, index) => (
             <Col key={index} xs={12} sm={6} md={4} lg={4} className="mb-5 p-2">
-              <ProductsCard
-                imageSrc={product.imageSrc}
-                titles={product.titles}
-                titlePosition={product.titlePosition}
-              />
+              <motion.div
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <ProductsCard
+                  imageSrc={product.imageSrc}
+                  titles={product.titles}
+                  titlePosition={product.titlePosition}
+                />
+              </motion.div>
             </Col>
           ))}
         </Row>
@@ -106,7 +146,6 @@ const PageContainer = styled.div`
     margin-bottom: 2rem;
   }
 
-  /* Media Query per dispositivi mobili */
   @media (max-width: 576px) {
     .title-ice {
       font-size: 2rem;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import SocialCard from '../../Molecules/CardsMolecules/SocialCard';
 import CustomTitle from '../../Atoms/CustomTitle';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -15,48 +16,73 @@ const SocialInstants = () => {
   const cardData = [
     {
       imageUrl: Social1,
-      description: "Descrizione fittizia 1",
-      instagramLink: "https://www.instagram.com/tuoaccount1/"
+      description: 'Descrizione fittizia 1',
+      instagramLink: 'https://www.instagram.com/tuoaccount1/',
     },
     {
       imageUrl: Social2,
-      description: "Descrizione fittizia 2",
-      instagramLink: "https://www.instagram.com/tuoaccount2/"
+      description: 'Descrizione fittizia 2',
+      instagramLink: 'https://www.instagram.com/tuoaccount2/',
     },
     {
       imageUrl: Social3,
-      description: "Descrizione fittizia 3",
-      instagramLink: "https://www.instagram.com/tuoaccount3/"
+      description: 'Descrizione fittizia 3',
+      instagramLink: 'https://www.instagram.com/tuoaccount3/',
     },
     {
       imageUrl: Social4,
-      description: "Descrizione fittizia 4",
-      instagramLink: "https://www.instagram.com/tuoaccount4/"
+      description: 'Descrizione fittizia 4',
+      instagramLink: 'https://www.instagram.com/tuoaccount4/',
     },
     {
       imageUrl: Social5,
-      description: "Descrizione fittizia 5",
-      instagramLink: "https://www.instagram.com/tuoaccount5/"
+      description: 'Descrizione fittizia 5',
+      instagramLink: 'https://www.instagram.com/tuoaccount5/',
     },
     {
       imageUrl: Social6,
-      description: "Descrizione fittizia 6",
-      instagramLink: "https://www.instagram.com/tuoaccount6/"
-    }
+      description: 'Descrizione fittizia 6',
+      instagramLink: 'https://www.instagram.com/tuoaccount6/',
+    },
   ];
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+  };
 
   return (
     <SocialContainer>
       <Container className="container-social-cards">
-        <CustomTitle text="SOCIAL INSTANTS" className="social-title" />
+        <motion.div
+          className="social-title"
+          variants={titleVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <CustomTitle text="SOCIAL INSTANTS" />
+        </motion.div>
         <Row className="row justify-content-center">
           {cardData.map((card, index) => (
             <Col key={index} xs={12} sm={6} md={6} lg={4} className="col-card">
-              <SocialCard
-                imageUrl={card.imageUrl}
-                description={card.description}
-                instagramLink={card.instagramLink}
-              />
+              <motion.div
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <SocialCard
+                  imageUrl={card.imageUrl}
+                  description={card.description}
+                  instagramLink={card.instagramLink}
+                />
+              </motion.div>
             </Col>
           ))}
         </Row>
@@ -72,13 +98,14 @@ const SocialContainer = styled.div`
   padding: 80px 0;
 
   .container-social-cards {
-  background-color: #131313;
+    background-color: #131313;
     max-width: 1000px;
+    margin: auto;
   }
 
   .row {
-  background-color: #131313;
     padding-top: 50px !important;
+      background-color: #131313;
     padding-bottom: 50px;
   }
 
@@ -93,12 +120,12 @@ const SocialContainer = styled.div`
     padding: 10px;
 
     @media (max-width: 768px) {
-      padding: 20px; /* Aggiungi più respiro intorno alle card */
+      padding: 20px;
     }
 
     @media (max-width: 576px) {
-      margin-bottom: 0px; 
-      padding: 25px; /* Aumenta ulteriormente il respiro */
+      margin-bottom: 0px;
+      padding: 25px;
     }
   }
 `;
