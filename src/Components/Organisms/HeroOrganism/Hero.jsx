@@ -100,7 +100,7 @@ const Placeholder = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color:rgb(138, 205, 243); /* Colore di fallback */
+  background-color:rgb(188, 225, 247); /* Colore di fallback */
   z-index: -1;
   animation: pulse 1.5s infinite;
 
