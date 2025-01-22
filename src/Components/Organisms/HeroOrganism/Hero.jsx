@@ -99,6 +99,7 @@ const Placeholder = styled.div`
   top: 0;
   left: 0;
   width: 100%;
+  overlay: hide;
   height: 100%;
   background-color:rgb(188, 225, 247); /* Colore di fallback */
   z-index: -1;
