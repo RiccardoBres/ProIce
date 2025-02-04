@@ -11,8 +11,8 @@ const WhereToFindUs = () => {
         <GoogleMaps/>
         <ContainerInfo>
         <CustomTitle text='PROICE LDA' className='mb-5'/>
-        <CustomParagraph text='R. Dona Laura Osorio 70' className='p-info'/>
-        <CustomParagraph text='Vila do Conde 480-509' className='p-info'/>
+        <CustomParagraph text='Rua Dona Laura Osório, Nº 70' className='p-info'/>
+        <CustomParagraph text='4480-509 Vila do Conde' className='p-info'/>
         <CustomParagraph text='Tel. +39 091 81 40 643' className='p-info'/>
         <div className="d-flex gap-2">
         <CustomParagraph text='E-mail:' className='p-info'/>

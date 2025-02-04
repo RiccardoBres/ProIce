@@ -20,7 +20,7 @@ const MapWrapper = styled.div`
 
 const GoogleMaps = () => {
   // Coordinate dell'indirizzo
-  const position = [41.374330, -8.290144]; // Coordinate precise
+  const position = [41.375251, -8.718400]; // Coordinate precise
 
   // Creare un'icona personalizzata per il marker con il logo
   const customIcon = new L.Icon({

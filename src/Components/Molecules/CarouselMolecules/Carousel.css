@@ -2,12 +2,13 @@
 
 .swiper {
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   overflow: hidden;
 
-  @media(max-width: 576px) {
-    padding: 0;
-    height: 50vh;
+  @media (max-width: 576px) {
+    .swiper {
+      height: auto; /* Evita schiacciamento forzato */
+    }
   }
 }
 
@@ -19,13 +20,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(191, 249, 254, 0.184);
+  aspect-ratio: 3 / 2;
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
-  max-width: 150px;
+  max-width: 350px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover; 
 }
 
 /* Aggiungi uno stile alle frecce personalizzate */
@@ -40,7 +43,7 @@
   cursor: pointer;
 
   @media(max-width: 576px) {
-    top: 20%;
+    top: 50%;
   }
 }
 

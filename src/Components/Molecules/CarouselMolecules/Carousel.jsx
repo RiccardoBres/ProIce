@@ -6,10 +6,13 @@ import 'swiper/css/pagination';
 import './Carousel.css';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import Image1 from '../../../Layout/Assets/Products/Cubi.png';
-import Image2 from '../../../Layout/Assets/Products/diamond.png';
-import Image3 from '../../../Layout/Assets/Products/parallele.png';
-import Image4 from '../../../Layout/Assets/Products/pineapple.png';
+import Image1 from '../../../Layout/Assets/CarouselProducts/car-1.jpg';
+import Image2 from '../../../Layout/Assets/CarouselProducts/car-2.png';
+import Image3 from '../../../Layout/Assets/CarouselProducts/car-3.png';
+import Image4 from '../../../Layout/Assets/CarouselProducts/car-4.png';
+import Image5 from '../../../Layout/Assets/CarouselProducts/car-5.jpeg';
+import Image6 from '../../../Layout/Assets/CarouselProducts/car-6.jpeg';
+
 
 
 
@@ -51,12 +54,11 @@ const Carousel = () => {
                 <img src={Image4} alt="Nature 2" />
             </SwiperSlide>
             <SwiperSlide>
-                <img src={Image1} alt="Nature 2" />
+                <img src={Image5} alt="Nature 2" />
             </SwiperSlide>
             <SwiperSlide>
-                <img src={Image2} alt="Nature 2" />
+                <img src={Image6} alt="Nature 2" />
             </SwiperSlide>
-
             <FaArrowLeft size={30} color="#fff" className="swiper-button-prev" /> {/* Icona freccia sinistra */}
             <FaArrowRight size={30} color="#fff" className="swiper-button-next" /> {/* Icona freccia destra */}
         </Swiper>

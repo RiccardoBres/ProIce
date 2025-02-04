@@ -64,5 +64,10 @@ const ProductContainer = styled.div`
 
   .carousel-container {
     margin-top: 2rem;
+
+    @media (max-width: 576px) {
+      margin-top: 2rem;
+    }
+  }
   }
 `;

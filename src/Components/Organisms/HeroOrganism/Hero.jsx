@@ -92,7 +92,6 @@ const ImageBackground = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(60%);
   z-index: -1;
 `;
 
@@ -128,7 +127,7 @@ const HeroContent = styled.div`
   .hero-paragraph {
     color: white;
     font-size: 2.5rem;
-    font-weight: 100;
-    letter-spacing: 8px;
+    font-weight: 500;
+    letter-spacing: 5px;
   }
 `;
