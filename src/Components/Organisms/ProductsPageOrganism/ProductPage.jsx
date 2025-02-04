@@ -3,11 +3,20 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-bootstrap';
 import ProductsCard from '../../Molecules/CardsMolecules/ProductsCard';
-import Product1 from '../../../Layout/Assets/Products/product1.png';
-import Product2 from '../../../Layout/Assets/Products/product2.png';
-import Product3 from '../../../Layout/Assets/Products/product3.png';
-import Product4 from '../../../Layout/Assets/Products/product4.png';
-import Product5 from '../../../Layout/Assets/Products/product1.png';
+
+import Sphere from '../../../Layout/Assets/Products/sfere.png';
+import Cubi from '../../../Layout/Assets/Products/Cubi.png';
+import OldFashon from '../../../Layout/Assets/Products/stick.png';
+import Parallel from '../../../Layout/Assets/Products/parallele.png';
+import Triangoli from '../../../Layout/Assets/Products/triangolo.png';
+
+
+import Diamond from '../../../Layout/Assets/Products/diamond.png';
+import Pumpkin from '../../../Layout/Assets/Products/pumpkin.png';
+import Pineapple from '../../../Layout/Assets/Products/pineapple.png';
+import Stick from '../../../Layout/Assets/Products/stick.png';
+import Heart from '../../../Layout/Assets/Products/heart.png';
+
 import CustomTitle from '../../Atoms/CustomTitle';
 
 const ProductPage = () => {
@@ -27,20 +36,20 @@ const ProductPage = () => {
   }, []);
 
   const productsUltimate = [
-    { imageSrc: Product1, titles: ['SPHERE 5.5', 'SPHERE 6.5'], titlePosition: isMobile ? 'row' : 'side' },
-    { imageSrc: Product2, titles: ['CUBE 4x4x4', 'CUBE 5x5x5'], titlePosition: isMobile ? 'row' : 'row' },
-    { imageSrc: Product3, titles: ['OLD-FASHIONED 5x5x7'], titlePosition: isMobile ? 'row' : 'side' },
-    { imageSrc: Product4, titles: ['COLLINS 4x4x6', 'COLLINS 4x4x10'], titlePosition: isMobile ? 'row' : 'row' },
-    { imageSrc: Product5, titles: ['EGIPCIAN 2.5', 'EGIPCIAN 3.5'], titlePosition: isMobile ? 'row' : 'row' },
+    { imageSrc: Sphere, titles: ['SPHERE 5.5', 'SPHERE 6.5'], titlePosition: isMobile ? 'row' : 'side' },
+    { imageSrc: Cubi, titles: ['CUBE 4x4x4', 'CUBE 5x5x5'], titlePosition: isMobile ? 'row' : 'row' },
+    { imageSrc: OldFashon, titles: ['OLD-FASHIONED 5x5x7'], titlePosition: isMobile ? 'row' : 'side' },
+    { imageSrc: Parallel, titles: ['COLLINS 4x4x6', 'COLLINS 4x4x10'], titlePosition: isMobile ? 'row' : 'row' },
+    { imageSrc: Triangoli, titles: ['EGIPCIAN 2.5', 'EGIPCIAN 3.5'], titlePosition: isMobile ? 'row' : 'row' },
   ];
 
   const productsSublime = [
-    { imageSrc: Product1, titles: ['SPHERE 5.5', 'SPHERE 6.5'], titlePosition: 'row' },
-    { imageSrc: Product2, titles: ['CUBE 4x4x4', 'CUBE 5x5x5'], titlePosition: 'row' },
-    { imageSrc: Product3, titles: ['OLD-FASHIONED 5x5x7'], titlePosition: 'row' },
-    { imageSrc: Product4, titles: ['COLLINS 4x4x6', 'COLLINS 4x4x10'], titlePosition: 'row' },
-    { imageSrc: Product5, titles: ['EGIPCIAN 2.5', 'EGIPCIAN 3.5'], titlePosition: 'row' },
-    { imageSrc: Product5, titles: ['EGIPCIAN 2.5', 'EGIPCIAN 3.5'], titlePosition: 'row' },
+    { imageSrc: Diamond, titles: ['DIAMOND'], titlePosition: 'row' },
+    { imageSrc: Pumpkin, titles: ['PUMPKIN'], titlePosition: 'row' },
+    { imageSrc: Pineapple, titles: ['PINEAPPLE'], titlePosition: 'row' },
+    { imageSrc: Stick, titles: ['STICK'], titlePosition: 'row' },
+    { imageSrc: Heart, titles: ['HEART'], titlePosition: 'row' },
+    { imageSrc: Diamond, titles: ['MIRROR BALL'], titlePosition: 'row' },
   ];
 
   const titleVariants = {

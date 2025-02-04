@@ -6,12 +6,12 @@ import 'swiper/css/pagination';
 import './Carousel.css';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import Image1 from '../../../Layout/Assets/CarouselProducts/carousel.jpg';
-import Image2 from '../../../Layout/Assets/CarouselProducts/carousel4.jpg';
-import Image3 from '../../../Layout/Assets/CarouselProducts/carousel7.jpg';
-import Image4 from '../../../Layout/Assets/CarouselProducts/carousel6.jpg';
-import Image5 from '../../../Layout/Assets/CarouselProducts/carousel.jpg';
-import Image6 from '../../../Layout/Assets/CarouselProducts/carousel4.jpg';
+import Image1 from '../../../Layout/Assets/Products/Cubi.png';
+import Image2 from '../../../Layout/Assets/Products/diamond.png';
+import Image3 from '../../../Layout/Assets/Products/parallele.png';
+import Image4 from '../../../Layout/Assets/Products/pineapple.png';
+
+
 
 
 const Carousel = () => {
@@ -49,12 +49,6 @@ const Carousel = () => {
             </SwiperSlide>
             <SwiperSlide>
                 <img src={Image4} alt="Nature 2" />
-            </SwiperSlide>
-            <SwiperSlide>
-                <img src={Image5} alt="Nature 2" />
-            </SwiperSlide>
-            <SwiperSlide>
-                <img src={Image6} alt="Nature 2" />
             </SwiperSlide>
             <SwiperSlide>
                 <img src={Image1} alt="Nature 2" />

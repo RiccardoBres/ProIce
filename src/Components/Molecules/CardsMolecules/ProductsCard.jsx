@@ -32,6 +32,7 @@ const Image = styled.img`
   object-fit: cover;
   filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
+  margin-bottom: 0.8rem;
 
   &:hover {
     filter: grayscale(0%);
@@ -47,5 +48,6 @@ const TitlesContainer = styled.div`
 
 const Title = styled.div`
   font-size: 1rem;
-  color: rgb(248, 224, 173);
+  color: rgb(249, 207, 117);
+
 `;

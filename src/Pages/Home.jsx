@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <ResponsiveNavbar />
-      <Hero background={HeroImg} titleHero="PROICE" paragraph="MADE OF COOLNESS" />
+      <Hero background={HeroImg} titleHero="PROICE" paragraph="THE ULTIMATE ICE" />
       <GeneralInfo />
       <ProductOrganism/>
       <SocialInstants/>

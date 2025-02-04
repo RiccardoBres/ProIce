@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import CustomTitle from '../../Atoms/CustomTitle';
+import Logotipo from '../../../Layout/Assets/LogotipoHero.png'
 import styled from 'styled-components';
 import CustomParagraph from '../../Atoms/CustomParagraph';
 
@@ -46,7 +47,7 @@ const Hero = ({ background, isVideo, titleHero, paragraph }) => {
           initial="hidden"
           animate="visible"
         >
-          <CustomTitle text={titleHero} className="hero-title" />
+          <img src={Logotipo} className="hero-title" />
         </motion.div>
         <motion.div
           variants={paragraphVariants}
@@ -91,6 +92,7 @@ const ImageBackground = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: grayscale(60%);
   z-index: -1;
 `;
 
@@ -121,10 +123,7 @@ const HeroContent = styled.div`
   text-align: center;
 
   .hero-title {
-    color: white;
-    font-size: 4rem;
-    font-weight: 100 !important;
-    letter-spacing: -8px;
+
   }
   .hero-paragraph {
     color: white;

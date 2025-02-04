@@ -2,9 +2,7 @@
 
 .swiper {
   width: 100%;
-  padding-top: 50px;
-  max-width: 1000px;
-  padding-bottom: 50px;
+  max-width: 700px;
   overflow: hidden;
 
   @media(max-width: 576px) {
@@ -17,12 +15,17 @@
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 300px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(191, 249, 254, 0.184);
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
+  max-width: 150px;
 }
 
 /* Aggiungi uno stile alle frecce personalizzate */
