@@ -10,7 +10,7 @@ const Products = () => {
   return (
     <>
     <ResponsiveNavbar/>
-    <Hero background={HeroImage} titleHero="PRODUCTS" paragraph="MADE OF COOLNESS" />
+    <Hero background={HeroImage} titleHero="PRODUCTS" paragraph="THE ULTIMATE ICE" />
     <ProductPage/>
     <FormSection/>
     <FooterContent/>
