@@ -6,9 +6,9 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Social1 from '../../../Layout/Assets/CarouselProducts/Carousel1.jpeg';
 import Social2 from '../../../Layout/Assets/CarouselProducts/Carousel2.jpeg';
 import Social3 from '../../../Layout/Assets/CarouselProducts/Carousel3.jpeg';
-import Social4 from '../../../Layout/Assets/CarouselProducts/Carousel1.jpeg';
-import Social5 from '../../../Layout/Assets/CarouselProducts/Carousel2.jpeg';
-import Social6 from '../../../Layout/Assets/CarouselProducts/Carousel3.jpeg';
+import Social4 from '../../../Layout/Assets/socialIstant1_files/social4.jpg';
+import Social5 from '../../../Layout/Assets/socialIstant1_files/social5.jpg';
+import Social6 from '../../../Layout/Assets/socialIstant1_files/social6.jpg';
 import styled from 'styled-components';
 
 const SocialInstants = () => {
@@ -17,32 +17,32 @@ const SocialInstants = () => {
     {
       imageUrl: Social1,
       description: 'Descrizione fittizia 1',
-      instagramLink: 'https://www.instagram.com/tuoaccount1/',
+      instagramLink: 'https://www.instagram.com/proice.pt',
     },
     {
       imageUrl: Social2,
       description: 'Descrizione fittizia 2',
-      instagramLink: 'https://www.instagram.com/tuoaccount2/',
+      instagramLink: 'https://www.instagram.com/proice.pt',
     },
     {
       imageUrl: Social3,
       description: 'Descrizione fittizia 3',
-      instagramLink: 'https://www.instagram.com/tuoaccount3/',
+      instagramLink: 'https://www.instagram.com/proice.pt',
     },
     {
       imageUrl: Social4,
       description: 'Descrizione fittizia 4',
-      instagramLink: 'https://www.instagram.com/tuoaccount4/',
+      instagramLink: 'https://www.instagram.com/proice.pt',
     },
     {
       imageUrl: Social5,
       description: 'Descrizione fittizia 5',
-      instagramLink: 'https://www.instagram.com/tuoaccount5/',
+      instagramLink: 'https://www.instagram.com/proice.pt',
     },
     {
       imageUrl: Social6,
       description: 'Descrizione fittizia 6',
-      instagramLink: 'https://www.instagram.com/tuoaccount6/',
+      instagramLink: 'https://www.instagram.com/proice.pt',
     },
   ];
 

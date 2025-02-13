@@ -6,20 +6,20 @@ import CustomTitle from '../../Atoms/CustomTitle';
 const PrivacyPolicyContent = () => {
     return (
         <ContainerPrivacyPolicy>
-            <CustomTitle text='PRIVACY POLICY' />
-            <CustomParagraph text='Your privacy is important to us. This Privacy Policy outlines how we collect, use, and protect your personal information when you use our services.' />
-            <CustomTitle text='1. Information We Collect' />
-            <CustomParagraph text='The only personal information we collect is your email address, which you provide voluntarily when subscribing to our services or contacting us.' />
-            <CustomTitle text='2. How We Use Your Information' />
-            <CustomParagraph text='Your email address is used solely to communicate with you regarding our products, services, and updates. We do not sell or share your information with third parties.' />
-            <CustomTitle text='3. Data Security' />
-            <CustomParagraph text='We take appropriate measures to ensure the security of your personal information. However, no method of electronic transmission or storage is 100% secure.' />
-            <CustomTitle text='4. Your Rights' />
-            <CustomParagraph text='You have the right to access, update, or delete your personal information. To do so, please contact us at privacy@tproice.pt.' />
-            <CustomTitle text='5. Changes to This Policy' />
-            <CustomParagraph text='We reserve the right to update this Privacy Policy at any time. Changes will be communicated via email or updated on our website.' />
-            <CustomTitle text='6. Contact Us' />
-            <CustomParagraph text='If you have any questions about this Privacy Policy, please contact us at privacy@tproice.pt.' />
+            <CustomTitle text='POLÍTICA DE PRIVACIDADE' />
+            <CustomParagraph text='A sua privacidade é importante para nós. Esta Política de Privacidade descreve como coletamos, usamos e protegemos as suas informações pessoais ao utilizar os nossos serviços.' />
+            <CustomTitle text='1. Informações que Coletamos' />
+            <CustomParagraph text='A única informação pessoal que coletamos é o seu endereço de e-mail, que você fornece voluntariamente ao se inscrever nos nossos serviços ou ao nos contactar.' />
+            <CustomTitle text='2. Como Usamos Suas Informações' />
+            <CustomParagraph text='O seu endereço de e-mail é usado exclusivamente para comunicar com você sobre nossos produtos, serviços e atualizações. Não vendemos nem compartilhamos as suas informações com terceiros.' />
+            <CustomTitle text='3. Segurança dos Dados' />
+            <CustomParagraph text='Tomamos medidas adequadas para garantir a segurança das suas informações pessoais. No entanto, nenhum método de transmissão eletrônica ou armazenamento é 100% seguro.' />
+            <CustomTitle text='4. Seus Direitos' />
+            <CustomParagraph text='Você tem o direito de acessar, atualizar ou excluir as suas informações pessoais. Para isso, entre em contato conosco.' />
+            <CustomTitle text='5. Alterações nesta Política' />
+            <CustomParagraph text='Reservamo-nos o direito de atualizar esta Política de Privacidade a qualquer momento. As alterações serão comunicadas por e-mail ou atualizadas em nosso site.' />
+            <CustomTitle text='6. Entre em Contato' />
+            <CustomParagraph text='Se tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco.' />
         </ContainerPrivacyPolicy>
     );
 };
@@ -41,6 +41,5 @@ const ContainerPrivacyPolicy = styled.div`
   }
     p{
              color: #b1b1b1!important;
-
     }
 `;

@@ -7,20 +7,20 @@ const TermOfServiceContent = () => {
     return (
         <>
             <ContainerTermsOfService>
-                <CustomTitle text='TERMS OF SERVICE' className='mt-5' />
-                <CustomParagraph text='Welcome to TPROICE LDA. These terms and conditions outline the rules and regulations for the use of our services and products.' />
-                <CustomTitle text='1. General Conditions' />
-                <CustomParagraph text='By accessing our website and using our services, you agree to comply with these terms. Failure to adhere to these terms may result in the termination of your access to our services.' />
-                <CustomTitle text='2. Products and Services' />
-                <CustomParagraph text='TPROICE LDA provides high-quality ice products. We reserve the right to modify or discontinue any product or service without prior notice. Prices are subject to change at any time.' />
-                <CustomTitle text='3. Payment and Billing' />
-                <CustomParagraph text='All payments must be made in accordance with the agreed terms. Failure to complete payment may result in the cancellation of your order.' />
-                <CustomTitle text='4. Limitation of Liability' />
-                <CustomParagraph text='TPROICE LDA is not liable for any indirect, incidental, or consequential damages arising from the use of our products or services.' />
-                <CustomTitle text='5. Governing Law' />
-                <CustomParagraph text='These terms are governed by the laws of Portugal. Any disputes arising from these terms shall be resolved in the courts of Portugal.' />
-                <CustomTitle text='6. Contact Information' />
-                <CustomParagraph text='For any questions or concerns regarding these terms, please contact us at support@tproice.pt.' />
+                <CustomTitle text='TERMOS DE SERVIÇO' className='mt-5' />
+                <CustomParagraph text='Bem-vindo à TPROICE LDA. Estes termos e condições definem as regras e regulamentos para a utilização dos nossos serviços e produtos.' />
+                <CustomTitle text='1. Condições Gerais' />
+                <CustomParagraph text='Ao aceder ao nosso website e utilizar os nossos serviços, concorda em cumprir estes termos. O não cumprimento destes termos pode resultar na suspensão do seu acesso aos nossos serviços.' />
+                <CustomTitle text='2. Produtos e Serviços' />
+                <CustomParagraph text='A TPROICE LDA fornece produtos de gelo de alta qualidade. Reservamo-nos o direito de modificar ou descontinuar qualquer produto ou serviço sem aviso prévio. Os preços estão sujeitos a alterações a qualquer momento.' />
+                <CustomTitle text='3. Pagamento e Faturação' />
+                <CustomParagraph text='Todos os pagamentos devem ser efetuados de acordo com os termos acordados. O não cumprimento do pagamento pode resultar no cancelamento da sua encomenda.' />
+                <CustomTitle text='4. Limitação de Responsabilidade' />
+                <CustomParagraph text='A TPROICE LDA não se responsabiliza por quaisquer danos indiretos, incidentais ou consequenciais decorrentes da utilização dos nossos produtos ou serviços.' />
+                <CustomTitle text='5. Lei Aplicável' />
+                <CustomParagraph text='Estes termos são regidos pelas leis de Portugal. Qualquer disputa decorrente destes termos será resolvida nos tribunais de Portugal.' />
+                <CustomTitle text='6. Contactos' />
+                <CustomParagraph text='Para quaisquer questões ou preocupações relativas a estes termos, entre em contacto connosco.' />
             </ContainerTermsOfService>
         </>
     );

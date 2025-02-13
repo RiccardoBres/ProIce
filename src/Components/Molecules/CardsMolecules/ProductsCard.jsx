@@ -30,13 +30,9 @@ const Image = styled.img`
   max-width: 150px;
   height: auto;
   object-fit: cover;
-  filter: grayscale(100%);
   transition: filter 0.3s ease, transform 0.3s ease;
   margin-bottom: 0.8rem;
 
-  &:hover {
-    filter: grayscale(0%);
-  }
 `;
 
 const TitlesContainer = styled.div`

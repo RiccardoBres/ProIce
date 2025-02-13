@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const SocialCard = ({ imageUrl, description, instagramLink }) => {
+const SocialCard = ({ imageUrl, instagramLink }) => {
     return (
         <CardContainer>
             <ImageWrapper imageUrl={imageUrl} />
             <InstagramLink href={instagramLink} target="_blank">
                 IG
             </InstagramLink>
-            <Description>{description}</Description>
         </CardContainer>
     );
 };

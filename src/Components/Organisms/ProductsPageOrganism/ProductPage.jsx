@@ -6,7 +6,7 @@ import ProductsCard from '../../Molecules/CardsMolecules/ProductsCard';
 
 import Sphere from '../../../Layout/Assets/Products/sfere.png';
 import Cubi from '../../../Layout/Assets/Products/Cubi.png';
-import OldFashon from '../../../Layout/Assets/Products/stick.png';
+import OldFashon from '../../../Layout/Assets/Products/oldfashion.png';
 import Parallel from '../../../Layout/Assets/Products/parallele.png';
 import Triangoli from '../../../Layout/Assets/Products/triangolo.png';
 
@@ -16,6 +16,12 @@ import Pumpkin from '../../../Layout/Assets/Products/pumpkin.png';
 import Pineapple from '../../../Layout/Assets/Products/pineapple.png';
 import Stick from '../../../Layout/Assets/Products/stick.png';
 import Heart from '../../../Layout/Assets/Products/heart.png';
+
+
+import LogoClassic from '../../../Layout/Assets/Products/logo-cubers-neg-h-en.png'; 
+import Classic from '../../../Layout/Assets/Products/EU_2KG_Classic_N-768x948.png';
+import Cocktails from '../../../Layout/Assets/Products/EU_2KG_Cocktail_web-768x948.png';
+import IceBall from '../../../Layout/Assets/Products/F2_EU_ICEBALLS-1-768x948.png'; 
 
 import CustomTitle from '../../Atoms/CustomTitle';
 
@@ -50,6 +56,12 @@ const ProductPage = () => {
     { imageSrc: Stick, titles: ['STICK'], titlePosition: 'row' },
     { imageSrc: Heart, titles: ['HEART'], titlePosition: 'row' },
     { imageSrc: Diamond, titles: ['MIRROR BALL'], titlePosition: 'row' },
+  ];
+
+  const iceBrand = [
+    { imageSrc: Classic, titles: ['CLASSIC ICE CUBE'], titlePosition: 'row' },
+    { imageSrc: Cocktails, titles: ['COCKTAIL ICE'], titlePosition: 'row' },
+    { imageSrc: IceBall, titles: ['ICE BALL', 'DOUBLE FREEZING'], titlePosition: 'row' },
   ];
 
   const titleVariants = {
@@ -122,6 +134,35 @@ const ProductPage = () => {
           ))}
         </Row>
       </Container>
+      <motion.div
+        className="title-ice"
+        variants={titleVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <img src={LogoClassic} className='img-logo-cubers' />
+      </motion.div>
+      <Container>
+        <Row>
+          {iceBrand?.map((product, index) => (
+            <Col key={index} xs={12} sm={6} md={4} lg={4} className="mb-5 p-2">
+              <motion.div
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <ProductsCard
+                  imageSrc={product.imageSrc}
+                  titles={product.titles}
+                  titlePosition={product.titlePosition}
+                />
+              </motion.div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </PageContainer>
   );
 };
@@ -136,6 +177,11 @@ const PageContainer = styled.div`
   padding: 5rem 2rem;
   background-color: #131313;
 
+
+  .img-logo-cubers{
+    max-width: 250px;
+  }
+
   .title-ice {
     color: white;
     font-size: 3rem;
@@ -149,6 +195,9 @@ const PageContainer = styled.div`
     align-items: center;
     justify-content: center;
     padding-top: 1rem;
+
+
+    
   }
 
   .col-products {

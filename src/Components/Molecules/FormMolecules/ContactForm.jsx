@@ -1,26 +1,103 @@
-import React from "react"; 
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const ContactForm = () => {
-    return (
-      <FormWrapper>
-        <FormTitle>CONTACT US</FormTitle>
-        <Form>
-          <Input type="text" placeholder="Name" required />
-          <Input type="text" placeholder="Surname" required />
-          <Input type="email" placeholder="Email" required />
-          <Textarea placeholder="Message" rows="5" required />
-          <CheckboxContainer>
-            <Checkbox type="checkbox" id="consent" required />
-            <Label htmlFor="consent">
-              I declare that I have seen the information pursuant to article 13 and I consent to the processing of my personal data.
-            </Label>
-          </CheckboxContainer>
-          <Button type="submit">Send Message</Button>
-        </Form>
-      </FormWrapper>
-    );
+  const [formData, setFormData] = useState({
+    name: "",
+    surname: "",
+    email: "",
+    message: "",
+    consent: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Qui puoi aggiungere la logica per inviare i dati al backend
+    console.log("Form Data:", formData);
+
+    // Esempio di invio dati al backend
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred while sending the message.");
+    }
+  };
+
+  return (
+    <FormWrapper>
+      <FormTitle>CONTACT US</FormTitle>
+      <Form onSubmit={handleSubmit}>
+        <Input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <Input
+          type="text"
+          name="surname"
+          placeholder="Surname"
+          value={formData.surname}
+          onChange={handleChange}
+          required
+        />
+        <Input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <Textarea
+          name="message"
+          placeholder="Message"
+          rows="5"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+        <CheckboxContainer>
+          <Checkbox
+            type="checkbox"
+            name="consent"
+            id="consent"
+            checked={formData.consent}
+            onChange={handleChange}
+            required
+          />
+          <Label htmlFor="consent">
+            I declare that I have seen the information pursuant to article 13 and I consent to the processing of my personal data.
+          </Label>
+        </CheckboxContainer>
+        <Button type="submit">Send Message</Button>
+      </Form>
+    </FormWrapper>
+  );
+};
 
 export default ContactForm;
 
