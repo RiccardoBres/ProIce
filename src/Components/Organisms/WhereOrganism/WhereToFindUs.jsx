@@ -10,13 +10,13 @@ const WhereToFindUs = () => {
         <CustomTitle text='WHERE TO FIND US' className='title-maps'/>
         <GoogleMaps/>
         <ContainerInfo>
-        <CustomTitle text='PROICE LDA' className='mb-5'/>
+        <CustomTitle text='IBEROCUBE LDA' className='mb-5'/>
         <CustomParagraph text='Rua Dona Laura Osório, Nº 70' className='p-info'/>
         <CustomParagraph text='4480-509 Vila do Conde' className='p-info'/>
-        <CustomParagraph text='Tel. +39 091 81 40 643' className='p-info'/>
+        <CustomParagraph text='Tel. +351 967 872 717' className='p-info'/>
         <div className="d-flex gap-2">
         <CustomParagraph text='E-mail:' className='p-info'/>
-        <CustomParagraph text='proice@gmail.com' className='p-white'/>
+        <CustomParagraph text='fabio.cubersporto@gmail.com' className='p-white'/>
         </div>
         </ContainerInfo>
     </ContainerMaps>
