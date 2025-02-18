@@ -171,10 +171,6 @@ const Offcanvas = styled.div`
     color: white;
     text-transform: uppercase;
     transition: color 0.2s ease;
-
-    &:hover {
-      color: rgb(182, 169, 101);
-    }
   }
 `;
 

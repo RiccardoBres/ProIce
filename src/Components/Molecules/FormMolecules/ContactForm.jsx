@@ -59,10 +59,10 @@ const ContactForm = () => {
   return (
     <FormWrapper>
       <ToastContainer position="top-right" autoClose={3000} />
-      <FormTitle>ENTRE EM CONTATO</FormTitle>
+      <FormTitle>CONTACTE-NOS</FormTitle>
       <Form onSubmit={handleSubmit}>
         <Input type="text" name="name" placeholder="Nome" value={formData.name} onChange={handleChange} required />
-        <Input type="text" name="surname" placeholder="Sobrenome" value={formData.surname} onChange={handleChange} required />
+        <Input type="text" name="surname" placeholder="Apelido" value={formData.surname} onChange={handleChange} required />
         <Input type="email" name="email" placeholder="E-mail" value={formData.email} onChange={handleChange} required />
         <Textarea name="message" placeholder="Mensagem" rows="5" value={formData.message} onChange={handleChange} required />
         <CheckboxContainer>

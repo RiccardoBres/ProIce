@@ -7,7 +7,7 @@ import GoogleMaps from '../../Molecules/MapsMolecules/GoogleMaps';
 const WhereToFindUs = () => {
   return (
     <ContainerMaps>
-        <CustomTitle text='WHERE TO FIND US' className='title-maps'/>
+        <CustomTitle text='ONDE NOS ENCONTRAR' className='title-maps'/>
         <GoogleMaps/>
         <ContainerInfo>
         <CustomTitle text='IBEROCUBE LDA' className='mb-5'/>
@@ -41,12 +41,12 @@ const ContainerMaps = styled.div`
     .title-maps{
         text-align: center;
         color: white;
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-top: 10rem;
         margin-bottom: 5rem;
 
         @media (max-width: 768px) {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-top: 15rem;
   }
     }

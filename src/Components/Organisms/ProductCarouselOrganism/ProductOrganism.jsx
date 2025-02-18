@@ -24,7 +24,7 @@ const ProductOrganism = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <CustomTitle text={'PRODUCTS'} />
+        <CustomTitle text={'PRODUTOS'} />
       </motion.div>
       <motion.div
         className="carousel-container"
