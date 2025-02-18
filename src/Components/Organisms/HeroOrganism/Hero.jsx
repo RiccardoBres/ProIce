@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import CustomTitle from '../../Atoms/CustomTitle';
-import Logotipo from '../../../Layout/Assets/LogotipoHero.png'
+import Logotipo from '../../../Layout/Assets/LogotipoHero.png';
 import styled from 'styled-components';
 import CustomParagraph from '../../Atoms/CustomParagraph';
 
-const Hero = ({ background, isVideo, titleHero, paragraph }) => {
+const Hero = ({ background, titleHero, paragraph }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    if (!isVideo) {
-      const img = new Image();
-      img.src = background;
-      img.onload = () => setIsLoaded(true); // Aggiorna lo stato quando l'immagine è caricata
-    }
-  }, [background, isVideo]);
+    const img = new Image();
+    img.src = background;
+    img.onload = () => setIsLoaded(true);
+  }, [background]);
 
   const titleVariants = {
     hidden: { opacity: 0, y: -50 },
@@ -28,17 +26,9 @@ const Hero = ({ background, isVideo, titleHero, paragraph }) => {
 
   return (
     <HeroContainer>
-      {isVideo ? (
-        <VideoBackground autoPlay muted loop>
-          <source src={background} type="video/mp4" />
-        </VideoBackground>
-      ) : (
-        <>
-          {!isLoaded && <Placeholder />}
-          {isLoaded && (
-            <ImageBackground style={{ backgroundImage: `url(${background})` }} />
-          )}
-        </>
+      {!isLoaded && <Placeholder />}
+      {isLoaded && (
+        <ImageBackground style={{ backgroundImage: `url(${background})` }} />
       )}
       <HeroContent>
         <motion.div
@@ -73,16 +63,6 @@ const HeroContainer = styled.div`
   align-items: center;
 `;
 
-const VideoBackground = styled.video`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-`;
-
 const ImageBackground = styled.div`
   position: absolute;
   top: 0;
@@ -100,9 +80,8 @@ const Placeholder = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  overlay: hide;
   height: 100%;
-  background-color:rgb(188, 225, 247); /* Colore di fallback */
+  background-color: rgb(188, 225, 247);
   z-index: -1;
   animation: pulse 1.5s infinite;
 
@@ -121,13 +100,20 @@ const HeroContent = styled.div`
   z-index: 1;
   text-align: center;
 
-  .hero-title {
-
-  }
   .hero-paragraph {
     color: white;
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: 5px;
+
+     @media (max-width: 768px) {
+      font-size: 2rem;
+    letter-spacing: 0px;
+    margin-top: 1rem;
   }
+  }
+
+  
 `;
+
+
