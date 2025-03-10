@@ -22,6 +22,7 @@ import LogoClassic from '../../../Layout/Assets/Products/logo-cubers-neg-h-en.pn
 import Classic from '../../../Layout/Assets/Products/EU_2KG_Classic_N-768x948.png';
 import Cocktails from '../../../Layout/Assets/Products/EU_2KG_Cocktail_web-768x948.png';
 import IceBall from '../../../Layout/Assets/Products/F2_EU_ICEBALLS-1-768x948.png'; 
+import MirrorBall from '../../../Layout/Assets/Products/mirorball.png'; 
 
 import CustomTitle from '../../Atoms/CustomTitle';
 
@@ -55,7 +56,7 @@ const ProductPage = () => {
     { imageSrc: Pineapple, titles: ['PINEAPPLE'], titlePosition: 'row' },
     { imageSrc: Stick, titles: ['STICK'], titlePosition: 'row' },
     { imageSrc: Heart, titles: ['HEART'], titlePosition: 'row' },
-    { imageSrc: Diamond, titles: ['MIRROR BALL'], titlePosition: 'row' },
+    { imageSrc: MirrorBall, titles: ['MIRROR BALL'], titlePosition: 'row' },
   ];
 
   const iceBrand = [
